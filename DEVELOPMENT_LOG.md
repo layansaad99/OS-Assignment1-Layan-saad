@@ -1,121 +1,95 @@
 # Development Log
 
-## Instructions
-Document your development process as you work on the assignment. Add entries showing:
-- What you worked on
-- Problems you encountered
-- How you solved them
-- Time spent
-
-**Requirements**: Minimum 5 entries showing progression over time.
-
----
-
-## Example Entry Format:
-
-### Entry 1 - [April 1, 2026, 2:30 PM]
-**What I did**: Forked the repository and set up my student ID
+### Entry 1 - [March 27, 2026, 10:00 AM]
+**What I did**: Set up GitHub and forked the repository
 
 **Details**: 
-- Created GitHub account with university email
-- Forked the starter repository
-- Changed student ID on line 92 to my actual ID (441234567)
-- Compiled and ran the program successfully
+Created GitHub account with my university email. Forked the starter repository and renamed it. Installed JDK and set up VS Code.
 
-**Challenges**: Had to install JDK first because javac wasn't recognized
+**Challenges**: Java wasn't working at first
 
-**Solution**: Downloaded JDK 17 from Oracle website and set PATH variable
+**Solution**: Downloaded JDK 17 and added it to PATH
 
 **Time spent**: 30 minutes
 
 ---
 
-## Your Development Log:
-
-### Entry 1 - [Date and Time]
-**What I did**: 
+### Entry 2 - [March 28, 2026, 2:00 PM]
+**What I did**: Changed student ID and studied the code
 
 **Details**: 
+Set my student ID (445052146) in SchedulerSimulation.java. Ran the program to see how it works. Read through both classes to understand the logic.
 
-**Challenges**: 
+**Challenges**: Understanding the relationship between Thread and Process
 
-**Solution**: 
+**Solution**: Added comments and traced the flow step by step
 
-**Time spent**: 
+**Time spent**: 1 hour
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**: 
+### Entry 3 - [March 28, 2026, 3:00 PM]
+**What I did**: Added Process Priority feature
 
 **Details**: 
+Added priority variable to Process class. Updated constructor and made random priorities between 1-5. Changed addProcessToQueue() to show priority.
 
-**Challenges**: 
+**Challenges**: Making sure random generation worked with existing seed
 
-**Solution**: 
+**Solution**: Used random.nextInt(5) + 1 with the existing Random object
 
-**Time spent**: 
+**Time spent**: 45 minutes
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**: 
+### Entry 4 - [March 29, 2026, 2:00 PM]
+**What I did**: Added Context Switch Counter
 
 **Details**: 
+Added static int contextSwitches variable. Incremented it before starting each thread. Printed the total at the end.
 
-**Challenges**: 
+**Challenges**: Deciding where to increment the counter
 
-**Solution**: 
+**Solution**: Put it right before currentThread.start()
 
-**Time spent**: 
+**Time spent**: 30 minutes
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**: 
+### Entry 5 - [March 29, 2026, 4:00 PM]
+**What I did**: Added Waiting Time Tracking
 
 **Details**: 
+Added totalWaitingTime variable and addWaitingTime() method. Tracked quantum start time and calculated waiting time for processes in queue. Fixed duplicate entries in summary.
 
-**Challenges**: 
+**Challenges**: Processes were showing up multiple times in the summary
 
-**Solution**: 
+**Solution**: Used HashMap to store each process only once before printing
 
-**Time spent**: 
+**Time spent**: 1 hour
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**: 
+### Entry 6 - [March 30, 2026, 6:00 PM]
+**What I did**: Recorded video and finished documentation
 
 **Details**: 
+Recorded 2-minute video showing code and execution. Uploaded to Google Drive. Completed all documentation files.
 
-**Challenges**: 
+**Challenges**: Keeping video under 3 minutes
 
-**Solution**: 
+**Solution**: Practiced explanation twice before recording
 
-**Time spent**: 
-
----
-
-### Entry 6 - [Optional - Date and Time]
-**What I did**: 
-
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
+**Time spent**: 1 hour
 
 ---
 
 ## Summary
 
-**Total time spent on assignment**: [X hours]
+**Total time spent**: About 5-6 hours
 
-**Most challenging part**: 
+**Most challenging part**: Waiting time tracking and fixing duplicate entries
 
-**Most interesting learning**: 
+**Most interesting learning**: Seeing how Round-Robin actually works with real output
 
-**What I would do differently next time**: 
+**What I would do differently**: Make more commits and test more frequently
