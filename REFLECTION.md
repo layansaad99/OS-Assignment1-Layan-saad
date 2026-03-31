@@ -1,58 +1,17 @@
-# Reflection Questions
+# Reflection
 
-## Instructions
-Answer the following questions about your learning experience. Each answer should be **at least 5-7 sentences** and show your understanding.
+## Question 1: What did you learn about multithreading from this assignment?
 
----
+I learned how to create and manage threads in Java using the Runnable interface. I also learned about the thread lifecycle and how to use methods like start(), join(), and sleep(). The Round-Robin simulation helped me understand how the CPU schedules processes and what happens during context switches. I also learned how to track waiting times and context switches in a real program.
 
-## Question 1: What did you learn about multithreading?
+## Question 2: What was the most challenging part of this assignment and why?
 
-**Your Answer:**
-
-[Write your answer here. Discuss specific concepts like thread creation, thread states, how threads execute concurrently, what surprised you, etc.]
-
----
-
-## Question 2: What was the most challenging part of this assignment?
-
-**Your Answer:**
-
-[Describe the specific challenge. Was it understanding the code? Implementing a feature? Using Git? Explain what made it difficult and how it relates to the course concepts.]
-
----
+The waiting time tracking was the hardest part for me. I had to figure out when processes are actually waiting and when they are running. At first, my waiting time summary showed duplicate processes because the map stored each process multiple times. I spent a lot of time trying to fix this issue.
 
 ## Question 3: How did you overcome the challenges you faced?
 
-**Your Answer:**
+I fixed the duplicate issue by using a HashMap to store unique processes before printing the summary. For the waiting time calculation, I added timestamps and printed them to understand the flow. I also tested each feature separately and committed my changes after each working feature so I could go back if something broke.
 
-[Describe your problem-solving approach. Did you read documentation? Ask for help? Debug systematically? What resources did you use? What strategies worked?]
+## Question 4: How can multithreading concepts be applied in real-world applications?
 
----
-
-## Question 4: How can you apply multithreading concepts in real-world applications?
-
-**Your Answer:**
-
-[Give specific examples from real applications you use (web browsers, games, mobile apps, etc.). Explain why threads are useful in those scenarios. Connect to what you learned in this assignment.]
-
----
-
-## Additional Reflections (Optional)
-
-### What would you like to learn more about?
-
-[Any topics related to threading, concurrency, or operating systems that you're curious about?]
-
----
-
-### How confident do you feel about multithreading concepts now?
-
-[Rate yourself and explain: Beginner / Intermediate / Confident]
-
-[Explain your rating - what do you understand well? What needs more practice?]
-
----
-
-### Feedback on the assignment
-
-[Any comments about the assignment? Was it helpful? Too easy/hard? Suggestions for improvement?]
+Multithreading is used in web servers to handle many users at once without slowing down. It's also used in video games where different threads handle graphics, sound, and user input separately. Another example is media players that use separate threads for video decoding and audio playback so they don't interrupt each other.

@@ -40,7 +40,7 @@ class Process implements Runnable {
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime;
-        this.priority = priority; // F1
+        this.priority = priority; // Feature 1: Process Priority
         this.creationTime = System.currentTimeMillis(); // ========== Feature 3 ==========
         this.totalWaitingTime = 0; // ========== Feature 3 ==========
     }
@@ -142,7 +142,7 @@ class Process implements Runnable {
         return remainingTime;
     }
 
-    public int getPriority() {
+    public int getPriority() { // Feature 1: Process Priority
         return priority;
     }
 
@@ -161,8 +161,8 @@ class Process implements Runnable {
 }
 
 public class SchedulerSimulation {
-    // Feature 2: Context Switch Counter
-    static int contextSwitches = 0;
+
+    static int contextSwitches = 0; // Feature 2: Context Switch Counter
 
     public static void main(String[] args) {
         int studentID = 445052146;
@@ -204,7 +204,7 @@ public class SchedulerSimulation {
         // Create processes
         for (int i = 1; i <= numProcesses; i++) {
             int burstTime = timeQuantum / 2 + random.nextInt(2 * timeQuantum + 1);
-            int priority = 1 + random.nextInt(5);
+            int priority = 1 + random.nextInt(5); // Feature 1: Process Priority
             Process process = new Process("P" + i, burstTime, timeQuantum, priority);
             addProcessToQueue(process, processQueue, processMap);
         }
@@ -236,7 +236,7 @@ public class SchedulerSimulation {
             }
 
             Thread currentThread = processQueue.poll();
-            contextSwitches++;
+            contextSwitches++; // Feature 2: Context Switch Counter
 
             System.out.println(Colors.BOLD + Colors.MAGENTA + "┌─ Ready Queue " + "─".repeat(65) + Colors.RESET);
             System.out.print(Colors.MAGENTA + "│ " + Colors.RESET + Colors.BRIGHT_WHITE + "[" + Colors.RESET);
@@ -296,7 +296,7 @@ public class SchedulerSimulation {
         for (Process p : processMap.values()) {
             uniqueProcesses.put(p.getName(), p);
         }
-
+        System.out.println("\nTotal context switches: " + contextSwitches); // Feature 2
         System.out.println("\n========== WAITING TIME SUMMARY ==========");
         for (Process p : uniqueProcesses.values()) {
             System.out.println(
@@ -316,6 +316,6 @@ public class SchedulerSimulation {
                 " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" +
                 Colors.RESET +
                 " | Priority: " + Colors.BRIGHT_YELLOW + process.getPriority() +
-                Colors.RESET);
+                Colors.RESET); // Feature 1: Process Priority
     }
 }
