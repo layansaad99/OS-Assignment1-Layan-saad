@@ -14,4 +14,8 @@ I fixed the duplicate issue by using a HashMap to store unique processes before 
 
 ## Question 4: How can multithreading concepts be applied in real-world applications?
 
+<<<<<<< HEAD
 Multithreading is used in web servers to handle many users at once without slowing down. It's also used in video games where different threads handle graphics, sound, and user input separately. Another example is media players that use separate threads for video decoding and audio playback so they don't interrupt each other.
+=======
+Multithreading is used in web servers to handle many users at once without slowing down. It's also used in video games where different threads handle graphics, sound, and user input separately. Another example is media players that use separate threads for video decoding and audio playback so they don't interrupt each other.
+>>>>>>> c60934b83d7fbd907c1344dc8601c24bb4fdfa3f

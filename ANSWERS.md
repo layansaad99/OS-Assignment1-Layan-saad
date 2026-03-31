@@ -75,5 +75,5 @@ The OS gives each app a time slice so everything feels responsive. You can play 
 3. Threads have different states during execution
 
 **Concepts I need to study more:**
-1. Thread synchronization
-2. Other scheduling algorithms
+1. 
+2. 

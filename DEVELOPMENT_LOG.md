@@ -92,4 +92,8 @@ Recorded 2-minute video showing code and execution. Uploaded to Google Drive. Co
 
 **Most interesting learning**: Seeing how Round-Robin actually works with real output
 
+<<<<<<< HEAD
 **What I would do differently**: Make more commits and test more frequently
+=======
+**What I would do differently**: Make more commits and test more frequently
+>>>>>>> c60934b83d7fbd907c1344dc8601c24bb4fdfa3f
