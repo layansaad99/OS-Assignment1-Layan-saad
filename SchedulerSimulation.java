@@ -316,6 +316,6 @@ public class SchedulerSimulation {
                 " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" +
                 Colors.RESET +
                 " | Priority: " + Colors.BRIGHT_YELLOW + process.getPriority() +
-                Colors.RESET); // Feature 1: Process Priority
+                Colors.RESET); // Feature 1: Process Priority..
     }
 }
